@@ -3,9 +3,10 @@
       "persistent": false,
       "scripts": [ "background.js" ]
    },
+   "author": "Karan Goel",
    "content_security_policy": "script-src 'self' https://code.jquery.com https://storage.googleapis.com https://fonts.googleapis.com; object-src 'self'",
    "description": "Set URL aliases ('m/' goes to 'mail.google.com')",
-   "homepage_url": "http://goel.io",
+   "homepage_url": "https://github.com/karan/chrome-url-alias",
    "icons": {
       "128": "icon-128.png",
       "96": "icon-96.png",

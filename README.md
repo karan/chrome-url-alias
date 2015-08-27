@@ -1,10 +1,10 @@
-URL Alias
+# URL Alias
 
 ![](https://raw.githubusercontent.com/karan/chrome-url-alias/master/icon-128.png)
 
 A handy Chrome extension to set URL aliases.
 
-<<<<DOWNLOAD BUTTON>>>>
+![https://chrome.google.com/webstore/detail/url-alias/nelckmdlallhkgniidbfafekeldjnakb](http://i.imgur.com/CzUM4CB.png)
 
 ### Example:
 

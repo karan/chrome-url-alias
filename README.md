@@ -4,7 +4,7 @@
 
 A handy Chrome extension to set URL aliases.
 
-![https://chrome.google.com/webstore/detail/url-alias/nelckmdlallhkgniidbfafekeldjnakb](http://i.imgur.com/CzUM4CB.png)
+[![](http://i.imgur.com/CzUM4CB.png)](https://chrome.google.com/webstore/detail/url-alias/nelckmdlallhkgniidbfafekeldjnakb)
 
 ### Example:
 

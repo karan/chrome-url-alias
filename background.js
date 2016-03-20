@@ -29,7 +29,7 @@ function doRedirectIfSaved(tabId, server, others) {
   if (redirect == null) {
     // Check if we have a matching redirect
     for (var key in store) {
-      if (key.startsWith(server)) {
+      if (punycode.ToASCII(key).startsWith(server)) {
         // Found the server
         redirect = store[key].replace("###", others.join('/'));
         break;

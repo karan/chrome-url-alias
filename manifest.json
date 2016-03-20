@@ -1,7 +1,7 @@
 {
    "background": {
       "persistent": false,
-      "scripts": [ "background.js" ]
+      "scripts": [ "punycode.js", "background.js" ]
    },
    "author": "Karan Goel",
    "content_security_policy": "script-src 'self' https://code.jquery.com https://storage.googleapis.com https://fonts.googleapis.com; object-src 'self'",

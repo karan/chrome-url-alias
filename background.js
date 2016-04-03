@@ -25,11 +25,20 @@ updateStore();
 // Checks if 'server' is to be redirected, and executes the redirect.
 function doRedirectIfSaved(tabId, server, others) {
   var redirect = store[server];
-
+  // Try to decode non-ASCII server name
+  try {
+    var decoded = punycode.ToUnicode(server);
+  } catch (e) {
+    if (e instanceof RangeError) {
+      var decoded = server;
+    } else {
+      throw e;
+    }
+  }
   if (redirect == null) {
     // Check if we have a matching redirect
     for (var key in store) {
-      if (punycode.ToASCII(key).startsWith(server)) {
+      if (key.startsWith(decoded)) {
         // Found the server
         redirect = store[key].replace("###", others.join('/'));
         break;

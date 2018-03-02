@@ -27,20 +27,23 @@ function doRedirectIfSaved(tabId, server, others) {
   var redirect = store[server];
 
   if (redirect == null) {
+    // No strict alias found. Check for dynamic alias
+
     // Check if we have a matching redirect
     for (var key in store) {
       if (key.startsWith(server)) {
         // Found the server
-        redirect = store[key].replace("###", others.join('/'));
+        redirect = store[key].replace("###", others);
         break;
       }
     }
   }
 
   if (redirect.indexOf('://') < 0) {
-    // Add a default protocol
+    // Add a default protocol if required
     redirect = "http://" + redirect;
   }
+  
   chrome.tabs.update(tabId, { url: redirect });
 }
 
@@ -52,7 +55,7 @@ function onTabUpdate(tabId, changeInfo, tab) {
 
   if (url_protocol_stripped != null && url_protocol_stripped.length >= 2) {
     var match = url_protocol_stripped[[1]].split("/");
-    doRedirectIfSaved(tabId, match[0], match.splice(1));
+    doRedirectIfSaved(tabId, match[0], match[1]);
   }
 }
 
